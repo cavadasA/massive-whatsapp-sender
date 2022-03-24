@@ -62,13 +62,13 @@ export default function Main() {
                 <div className="col-6 px-4 py-4">
                     <h1>Mensaje</h1>
                     <div className="input-group input-group-lg">
-                        <textarea className="form-control" rows={18} onChange={(event) => setMessage(event.target.value)}></textarea>
+                        <textarea className="form-control" rows={18} value={message} onChange={(event) => setMessage(event.target.value)}></textarea>
                     </div>
                 </div>
                 <div className="col-6 px-4 py-4">
                     <h1>Teléfonos</h1>
                     <div className="input-group input-group-lg">
-                        <textarea className="form-control" rows={18} onChange={(event) => setPreProcessedPhones(event.target.value)}></textarea>
+                        <textarea className="form-control" rows={18} value={preProcessedPhones} onChange={(event) => setPreProcessedPhones(event.target.value)}></textarea>
                     </div>
                 </div>
             </div>
