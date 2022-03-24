@@ -5,13 +5,12 @@ import Row from './Row';
 export default function Main() {
 
     const [message, setMessage] = useState("");
-    const [processedPhones, setProcessedPhones] = useState([]);
     const [preProcessedPhones, setPreProcessedPhones] = useState("");
+    const [processedPhones, setProcessedPhones] = useState([]);
     const [whatsappLinks, setWhatsappLinks] = useState([]);
 
     function handlePhones(phonesAsText) {
         let separatedPhones = phonesAsText.split('\n');
-        console.log(separatedPhones)
         setProcessedPhones(() => [])
         setWhatsappLinks(() => [])
         separatedPhones.forEach(phone => {
@@ -40,13 +39,17 @@ export default function Main() {
             }
         });
     }
+    function handleDelete() {
+        setMessage(() => "");
+        setProcessedPhones(() => [])
+        setPreProcessedPhones(() => "")
+        setWhatsappLinks(() => [])
+    }
     function createLinks() {
         processedPhones.forEach(phone => {
             setWhatsappLinks(oldArray => [...oldArray, { "telefono": phone, "enlace": "https://wa.me/" + phone + "?text=" + encodeURIComponent(message) }]);
         })
     }
-
-
     useEffect(() => {
         if (processedPhones.length !== 0) {
             createLinks();
@@ -82,6 +85,18 @@ export default function Main() {
                         </button>
                     </div>
                 </div>
+                <div className="col">
+                    <div className="button">
+                        <button
+                            className="btn"
+                            style={{ backgroundColor: "pink" }}
+                            type="button"
+                            onClick={() => handleDelete()}
+                        >
+                            Borrar mono &#x1f98b;
+                        </button>
+                    </div>
+                </div>
             </div>
             {whatsappLinks.length !== 0 ? (
                 <div className='row'>
@@ -91,13 +106,13 @@ export default function Main() {
                                 <th scope="col">#</th>
                                 <th scope="col">Teléfono</th>
                                 <th scope="col">Enlace</th>
-                                <th scope="col">Check</th>
+                                <th scope="col">Enviado</th>
                             </tr>
                         </thead>
                         <tbody>
                             {whatsappLinks.map((link, index) => {
 
-                                return (/**/
+                                return (
                                     <Row index={index} link={link} key={index}></Row>
                                 )
                             })}
