@@ -81,7 +81,7 @@ export default function Main() {
                             type="button"
                             onClick={() => handlePhones(preProcessedPhones)}
                         >
-                            Enviar mono &#128539;
+                            Enviar
                         </button>
                     </div>
                 </div>
@@ -93,7 +93,7 @@ export default function Main() {
                             type="button"
                             onClick={() => handleDelete()}
                         >
-                            Borrar mono &#x1f98b;
+                            Borrar
                         </button>
                     </div>
                 </div>
