@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { IoLogoWhatsapp } from 'react-icons/io'
+import { FiSend } from 'react-icons/fi'
 
 
 export default function Row(props) {
@@ -19,7 +19,7 @@ export default function Row(props) {
         <tr className={checked ? "table-success" : ""}>
             <th scope="row">{props.index + 1}</th>
             <td>+{props.link.telefono}</td>
-            <td><a href={props.link.enlace} target="_blank"><IoLogoWhatsapp size={40} style={{ color: "pink" }} onClick={() => handleChecked(props.index)} /></a></td>
+            <td><a href={props.link.enlace} target="_blank"><FiSend size={30} style={{ color: "pink" }} onClick={() => handleChecked(props.index)} /></a></td>
             <td className='text-center'>
                 <div className="form-check d-flex justify-content-center align-items-center">
                     <input className="form-check-input text-end" type="checkbox" checked={checked} id={"prueba" + props.index} onChange={() => handleChecked(props.index)} />
