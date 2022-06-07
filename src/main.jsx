@@ -71,23 +71,19 @@ export default function Main() {
             setWhatsappLinks(oldArray => [...oldArray, { "telefono": phone, "enlace": "https://api.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(message) }]);
         })
     }
-    function handleTextModification(text, type) {
+    function handleTextModification(type) {
+        let textArea = document.getElementById('messageTextArea');
+        let indexBeginningSelection = textArea.selectionStart;
+        let indexEndingSelection = textArea.selectionEnd;
+        let selectedText = message.substring(indexBeginningSelection, indexEndingSelection)
+        let textBeforeSelection = message.substring(0, indexBeginningSelection)
+        let textAfterSelection = message.substring(indexEndingSelection)
         if (type === 'bold') {
-            let textArea = document.getElementById('messageTextArea');
-            let indexBeginningSelection = textArea.selectionStart;
-            let indexEndingSelection = textArea.selectionEnd;
-            let firstPart = runes.substr(message, 0, indexBeginningSelection);
-            let secondPart = runes.substr(message, indexEndingSelection);
-            let newText = "*" + text + "*"
-            setMessage(firstPart + newText + secondPart);
+            let boldedText = "*" + selectedText + "*"
+            setMessage(textBeforeSelection + boldedText + textAfterSelection);
         } else if (type === 'italic') {
-            let textArea = document.getElementById('messageTextArea');
-            let indexBeginningSelection = textArea.selectionStart;
-            let indexEndingSelection = textArea.selectionEnd;
-            let firstPart = runes.substr(message, 0, indexBeginningSelection);
-            let secondPart = runes.substr(message, indexEndingSelection);
-            let newText = "_" + text + "_"
-            setMessage(firstPart + newText + secondPart);
+            let italickedTExt = "_" + selectedText + "_"
+            setMessage(textBeforeSelection + italickedTExt + textAfterSelection);
         }
     }
     /*const onEmojiClick = (event, emojiObject) => {
@@ -136,10 +132,10 @@ export default function Main() {
                                 <FiTrash2 onClick={() => handleDelete("message")} className='mb-3' style={{ cursor: "pointer" }} size={30} />
                             </div>
                             <div className='col-1 '>
-                                <BiBold onMouseDown={() => handleTextModification(window.getSelection().toString(), 'bold')} className='mb-3' style={{ cursor: "pointer" }} size={30} />
+                                <BiBold onMouseDown={() => handleTextModification('bold')} className='mb-3' style={{ cursor: "pointer" }} size={30} />
                             </div>
                             <div className='col-1'>
-                                <FiItalic onMouseDown={() => handleTextModification(window.getSelection().toString(), 'italic')} className='mb-3' style={{ cursor: "pointer" }} size={30} />
+                                <FiItalic onMouseDown={() => handleTextModification('italic')} className='mb-3' style={{ cursor: "pointer" }} size={30} />
                             </div>
                             {/*<div className='col-1 align-self-start'>
                                 <BsEmojiSmile onClick={() => {
