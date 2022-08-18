@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Welcome to Whatssive!
+Hello! This application is aimed at sales teams and entrepreneurs who need to send the same message to a number of contacts on WhatsApp and need to do it in an efficient way.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+With **Whatssive** you can write a message, edit it with the special formats (**Bold**, *Italics*) in whatsapp, save messages for future sending as well as saving phone lists.
 
-## Available Scripts
+## How to use Whatssive
 
-In the project directory, you can run:
+ - Write a message on the top box for the contacts you're sending it to.
+ - Highlight text and click on the **B** or *I* buttons as desired for editing.
+ - Enter the phone numbers you want to send it to, there are three accepted formats:
+	- Country code (+34, +593, +52, etc.) + phone number. For example: +59322505660 or +525536017599
+	- 2 zeros (00) + country code (34, 593, 52, etc.) + phone. For example: 0059322505660 or 00525536017599
+	- Country code (34, 593, 52, etc.) + phone. For example: 59322505660 or 525536017599
+- Click on the blue arrow on the messages box to generate a link with the message you typed for each phone number you entered, which will show the list with the links in the right side of the site.
+- Click on the pink paper plane button next to each phone number to open whatsapp with the contact and message loaded in it just for you to click on send!
 
-### `npm start`
+## Technologies used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ - ReactJS: Dynamic and component based.
+ - Bootstrap: Easy and quick formatting
+ - Firebase login: Quick and secure registration and login.
+ - MongoDB: flexibility obtained. No rigid schema.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Licensing
+MIT License
 
-### `npm test`
+Copyright (c) 2022 Antonio Cavadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-### `npm run build`
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
