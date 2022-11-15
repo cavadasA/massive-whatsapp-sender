@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/massive-whatsapp-sender/static/css/main.6288f6cc.css",
-    "main.js": "/massive-whatsapp-sender/static/js/main.837c0ae8.js",
+    "main.js": "/massive-whatsapp-sender/static/js/main.3418afe2.js",
     "index.html": "/massive-whatsapp-sender/index.html",
     "main.6288f6cc.css.map": "/massive-whatsapp-sender/static/css/main.6288f6cc.css.map",
-    "main.837c0ae8.js.map": "/massive-whatsapp-sender/static/js/main.837c0ae8.js.map"
+    "main.3418afe2.js.map": "/massive-whatsapp-sender/static/js/main.3418afe2.js.map"
   },
   "entrypoints": [
     "static/css/main.6288f6cc.css",
-    "static/js/main.837c0ae8.js"
+    "static/js/main.3418afe2.js"
   ]
 }
